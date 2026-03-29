@@ -1,4 +1,5 @@
 import React from 'react';
+import { FiShoppingCart } from 'react-icons/fi';
 
 const NavBar = () => {
     return (
@@ -6,7 +7,20 @@ const NavBar = () => {
             <div className='text-5xl font-bold '>
                 <h1>DigiTools</h1>
             </div>
-            
+            <div>
+                <ul className='flex gap-3 lg:gap-5 text-xl'>
+                    <li>Products</li>
+                    <li>Features</li>
+                    <li>Pricing</li>
+                    <li>Testimonials</li>
+                    <li>FAQ</li>
+                </ul>
+            </div>
+            <div className='flex items-center md:gap-6 gap-4'>
+                <div><FiShoppingCart className='text-3xl font-medium cursor-pointer'></FiShoppingCart></div>
+                <div><button className='text-xl font-medium cursor-pointer'>Login</button></div>
+                <div><button className='font-semibold cursor-pointer text-xl px-7 py-3 rounded-full text-white bg-gradient-to-tr from-[#4F39F6]  to-[#9514FA]'>Get Started</button></div>
+            </div>
         </div>
     );
 };
