@@ -9,7 +9,7 @@ const ProcessCard = () => {
 
             <div className=''>
 
-                <h3 className='pb-3 text-4xl font-extrabold'>Get Started in 3 Steps</h3>
+                <h3 className='pb-3 text-5xl font-extrabold'>Get Started in 3 Steps</h3>
                 
                 <p className='text-[#627382]'>Start using premium digital tools in minutes, not hours.</p>
 
@@ -28,7 +28,7 @@ const ProcessCard = () => {
 
                         <h3 className='text-2xl font-bold'>Create Account</h3>
 
-                        <div  className='text-[#627382] max-w-80  flex justify-center items-center'>Sign up for free in seconds. No credit card required to get started.</div>
+                        <div  className='text-[#627382] max-w-70  flex justify-center items-center'>Sign up for free in seconds. No credit card required to get started.</div>
 
                     </div>
 
@@ -45,7 +45,7 @@ const ProcessCard = () => {
 
                         <h3 className='text-2xl font-bold'>Choose Products</h3>
 
-                        <div  className='text-[#627382] max-w-80  flex justify-center items-center'>Browse our catalog and select the tools that fit your needs. </div>
+                        <div  className='text-[#627382] max-w-70  flex justify-center items-center'>Browse our catalog and select the tools that fit your needs. </div>
 
                     </div>
 
@@ -62,7 +62,7 @@ const ProcessCard = () => {
 
                         <h3 className='text-2xl font-bold'>Start Creating</h3>
 
-                        <div  className='text-[#627382] max-w-80  flex justify-center items-center'>Download and start using your premium tools immediately.</div>
+                        <div  className='text-[#627382] max-w-70  flex justify-center items-center'>Download and start using your premium tools immediately.</div>
 
                     </div>
 
