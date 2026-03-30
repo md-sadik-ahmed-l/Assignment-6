@@ -1,6 +1,6 @@
 import React from 'react';
 
-const ToolsCard = () => {
+const ToolsCart = () => {
     return (
         <div>
             
@@ -8,4 +8,4 @@ const ToolsCard = () => {
     );
 };
 
-export default ToolsCard;
+export default ToolsCart;
