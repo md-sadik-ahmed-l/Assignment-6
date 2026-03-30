@@ -15,7 +15,7 @@ const ProcessCard = () => {
 
             </div>
 
-            <div className='flex gap-10'>
+            <div className='flex flex-wrap justify-center items-center gap-10'>
 
                 <div className='rounded-2xl shadow- p-3 bg-white'>
 

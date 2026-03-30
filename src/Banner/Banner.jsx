@@ -58,7 +58,7 @@ const Banner = () => {
             </div>
 
 
-            <div className='flex justify-center py-15 gap-70 items-center px-5 lg:px-10 text-white bg-gradient-to-tr from-[#4F39F6]  to-[#9514FA]'>
+            <div className='flex flex-wrap justify-center py-15 gap-70 items-center px-5 lg:px-10 text-white bg-gradient-to-tr from-[#4F39F6]  to-[#9514FA]'>
 
                 <div className=''>
 
