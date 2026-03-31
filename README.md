@@ -1,16 +1,27 @@
-# React + Vite
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
-Currently, two official plugins are available:
+#  Digital Tools Buying Website
+    Digital Tools Buying Website
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## A little description:
 
-## React Compiler
+    A modern React store showcasing products with interactive cards, seamless cart functionality, and responsive design for all devices.
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
 
-## Expanding the ESLint configuration
+### Technologies Used:
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+    1. React.js – Frontend library for building interactive UI
+
+    2. Tailwind CSS – For responsive and modern styling
+
+    3. React-Toastify – For beautiful toast notifications
+
+    4. JavaScript / JSON – Data handling and logic
+
+#### Features
+
+    1. Interactive Product Cards – Display products with features, price, tags, and “Buy Now” button.
+
+    2. Cart Functionality – Add, remove, and checkout products with live cart count in the navbar.
+
+    3. Responsive Design – Works beautifully on mobile, tablet, and desktop screens.

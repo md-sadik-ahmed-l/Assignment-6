@@ -15,7 +15,7 @@ const ToolsProducts = ({ToolsData, selectedProducts, setSelectedProducts }) => {
         const exists = selectedProducts.find(item => item.id === ToolsData.id);
 
         if (exists) {
-            toast.warning(`${ToolsData.name} is already in the cart!`);
+            toast.warning(`${ToolsData.name} is already add to cart!`);
             return;
         }
 
