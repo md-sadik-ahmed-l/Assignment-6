@@ -1,10 +1,15 @@
 import React from 'react';
 import ToolsFeatures from './ToolsFeatures';
 
-const ToolsProducts = ({ToolsData}) => {
+const ToolsProducts = ({ToolsData, selectedProducts, setSelectedProducts }) => {
 
     const {name, description, icon, period, price, tag, features  } =ToolsData;
+
+
+
     return (
+
+
         <div className=' shadow-2xl rounded-2xl border border-[#dddada] w-80 p-6 bg-[#f0f0f3]'>
             <h1>{tag}</h1>
 
@@ -28,8 +33,17 @@ const ToolsProducts = ({ToolsData}) => {
             </div>
 
             <div className='flex justify-center mt-5  text-white '>
-                <button className='font-bold rounded-full cursor-pointer bg-linear-to-tr from-[#4F39F6]  to-[#9514FA] w-full py-3'>Buy Now</button>
+
+
+                <button 
+
+                onClick={()=> setSelectedProducts([...selectedProducts, ToolsData])}
+                
+                className='font-bold rounded-full cursor-pointer bg-linear-to-tr from-[#4F39F6]  to-[#9514FA] w-full py-3'>Buy Now</button>
+
+
             </div>
+
             
         </div>
     );

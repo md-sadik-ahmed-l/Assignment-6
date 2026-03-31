@@ -7,7 +7,7 @@ const ToolsFeatures = ({features}) => {
     return (
         <div>
             <p className='flex items-center gap-2 pt-2 text-[#627382]'> 
-                <LuCircleCheckBig npm install react-icons></LuCircleCheckBig>
+                <LuCircleCheckBig></LuCircleCheckBig>
                  {features}</p>
         </div>
     );

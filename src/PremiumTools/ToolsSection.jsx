@@ -1,7 +1,12 @@
-import React, { use } from 'react';
+import React, { use, useState } from 'react';
 import ToolsProducts from './ToolsProducts';
+import ToolsCart from './ToolsCart';
 
 const ToolsSection = ({ToolsPromise}) => {
+
+    const [selectedType, setSelectedType] = useState("Products")
+
+    const [selectedProducts, setSelectedProducts] = useState([]);
 
     const Tools = use(ToolsPromise);
     return (
@@ -15,24 +20,52 @@ const ToolsSection = ({ToolsPromise}) => {
                     <p>to boost your productivity and creativity.</p>
                 </div>
 
-                <div className='mb-16 mt-9 flex border rounded-full'>
+                <div className='mb-16 mt-9 flex border p-1 rounded-full'>
 
-                    <button className='font-bold text-white   rounded-full cursor-pointer bg-linear-to-tr from-[#4F39F6]  to-[#9514FA] w-full py-3 px-7'>
+                    <button 
+                    
+                    onClick={()=>  setSelectedType("Products")}
+                    
+                    className={`${selectedType === "Products" ?" text-white bg-linear-to-tr from-[#4F39F6]  to-[#9514FA] ":"" }  font-bold  mr-1  rounded-full cursor-pointer  w-full py-3 px-7`}>
                         Products
                     </button>
 
-                    <button className='py-3 px-10    rounded-full cursor-pointer ' >
-                        Cart(0)
+                    <button 
+
+                        onClick={()=> setSelectedType ("Cart")}
+                    
+                        className= {`${selectedType === "Cart" ? " text-white bg-linear-to-tr from-[#4F39F6]  to-[#9514FA] ":"" } py-3 px-10  border  rounded-full cursor-pointer `}
+                    >
+                        Cart({selectedProducts.length})
                     </button>
 
                 </div>
+                
+                { selectedType === "Products" ? 
+                
                 <div className='flex flex-wrap justify-center gap-7'>
 
                     {
-                        Tools.map(ToolsData => <ToolsProducts ToolsData={ToolsData}></ToolsProducts>)
+                        Tools.map(ToolsData => <ToolsProducts 
+                            key={ToolsData.id} 
+                            ToolsData={ToolsData}
+                            selectedProducts ={ selectedProducts}
+                            setSelectedProducts = {setSelectedProducts}
+
+                        >
+
+                        </ToolsProducts>)
                     }
 
+
                 </div>
+
+                :
+
+                <ToolsCart selectedProducts= {selectedProducts} setSelectedProducts= {setSelectedProducts}></ToolsCart>
+
+
+                }
                 
 
             </div>

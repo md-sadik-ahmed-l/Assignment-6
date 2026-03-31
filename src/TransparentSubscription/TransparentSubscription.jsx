@@ -14,7 +14,7 @@ const TransparentSubscription = ({subscriptionPromise}) => {
             
             <div className='grid sm:grid-cols-2  lg:grid-cols-3 gap-15 '>
                 {
-                    subscriptionData.map(subscription =>  <SubscriptionsCard subscription={subscription}></SubscriptionsCard> )        
+                    subscriptionData.map(subscription =>  <SubscriptionsCard key={subscriptionData.id} subscription={subscription}></SubscriptionsCard> )        
                 }
             </div>
             
