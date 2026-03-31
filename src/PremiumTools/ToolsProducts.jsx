@@ -1,9 +1,30 @@
-import React from 'react';
+import React, { useState } from 'react';
 import ToolsFeatures from './ToolsFeatures';
+import { toast } from 'react-toastify/unstyled';
 
 const ToolsProducts = ({ToolsData, selectedProducts, setSelectedProducts }) => {
 
     const {name, description, icon, period, price, tag, features  } =ToolsData;
+
+
+    const [isSelected, setIsSelected] = useState(false);
+
+    const handleChoosePlayer = ()=>{
+
+        const exists = selectedProducts.find(item => item.id === ToolsData.id);
+
+        if (exists) {
+            toast.warning("Player already selected!");
+            return;
+        }
+
+        
+
+        toast.success( `${ToolsData.name} is selected`)
+        setIsSelected(true)
+        setSelectedProducts([...selectedProducts, ToolsData]);
+
+    };
 
 
 
@@ -19,7 +40,7 @@ const ToolsProducts = ({ToolsData, selectedProducts, setSelectedProducts }) => {
                 <h1 className='font-bold text-2xl '>{name}</h1>
                 <p className='text-[#627382]'>{description}</p>
                 <div className='flex mt-2 items-center'>
-                    <h3 className='font-bold text-2xl'>{price}</h3>
+                    <h3 className='font-bold text-2xl'>${price}</h3>
                     <p className='text-[#627382]'>/{period}</p>
                 </div>
 
@@ -37,9 +58,12 @@ const ToolsProducts = ({ToolsData, selectedProducts, setSelectedProducts }) => {
 
                 <button 
 
-                onClick={()=> setSelectedProducts([...selectedProducts, ToolsData])}
-                
-                className='font-bold rounded-full cursor-pointer bg-linear-to-tr from-[#4F39F6]  to-[#9514FA] w-full py-3'>Buy Now</button>
+                onClick={handleChoosePlayer}
+                disabled = {isSelected}
+                className='font-bold rounded-full cursor-pointer bg-linear-to-tr from-[#4F39F6]  to-[#9514FA] w-full py-3'>
+
+                    {isSelected ? "selected": "Buy Now"}
+                </button>
 
 
             </div>

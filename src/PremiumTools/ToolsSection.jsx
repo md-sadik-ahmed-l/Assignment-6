@@ -2,11 +2,11 @@ import React, { use, useState } from 'react';
 import ToolsProducts from './ToolsProducts';
 import ToolsCart from './ToolsCart';
 
-const ToolsSection = ({ToolsPromise}) => {
+const ToolsSection = ({ToolsPromise, selectedProducts, setSelectedProducts}) => {
 
     const [selectedType, setSelectedType] = useState("Products")
 
-    const [selectedProducts, setSelectedProducts] = useState([]);
+    
 
     const Tools = use(ToolsPromise);
     return (
@@ -43,26 +43,30 @@ const ToolsSection = ({ToolsPromise}) => {
                 
                 { selectedType === "Products" ? 
                 
-                <div className='flex flex-wrap justify-center gap-7'>
+                    <div className='flex flex-wrap justify-center gap-7'>
 
-                    {
-                        Tools.map(ToolsData => <ToolsProducts 
-                            key={ToolsData.id} 
-                            ToolsData={ToolsData}
-                            selectedProducts ={ selectedProducts}
-                            setSelectedProducts = {setSelectedProducts}
+                        {
+                            Tools.map(ToolsData => <ToolsProducts 
+                                key={ToolsData.id} 
+                                ToolsData={ToolsData}
+                                selectedProducts ={ selectedProducts}
+                                setSelectedProducts = {setSelectedProducts}
 
-                        >
+                            >
 
-                        </ToolsProducts>)
-                    }
+                            </ToolsProducts>)
+                        }
 
 
-                </div>
+                    </div>
 
-                :
+                    :
 
-                <ToolsCart selectedProducts= {selectedProducts} setSelectedProducts= {setSelectedProducts}></ToolsCart>
+                    <div className=''>
+
+                        <ToolsCart selectedProducts= {selectedProducts} setSelectedProducts= {setSelectedProducts}></ToolsCart>
+
+                    </div>
 
 
                 }
